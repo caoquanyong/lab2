@@ -1,0 +1,90 @@
+﻿@model lab2.Models.Book
+ 
+@{
+    ViewBag.Title = "详情";
+}
+
+<h2>详情</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+
+        <dt>
+           <b> AuthorName</b> 
+        </dt>
+
+        <dd>
+            @ViewBag.aauthor.Name
+        </dd>
+
+        <dt>
+            <b> AuthorAge</b>
+        </dt>
+
+        <dd>
+            @ViewBag.aauthor.Age
+        </dd>
+        <dt>
+            <b> AuthorCountry</b>
+        </dt>
+
+        <dd>
+            @ViewBag.aauthor.Country
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("返回主页", "Index")
+</p>
